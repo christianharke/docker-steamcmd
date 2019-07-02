@@ -20,11 +20,7 @@ WORKDIR ${appdir}
 
 # Install application
 RUN wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz && \
-    tar -xvzf steamcmd_linux.tar.gz && \
-    ./steamcmd.sh +quit
-
-# Create link to steamclient library
-RUN mkdir -p /home/${user}/.steam/sdk32  && \
-    ln -s ${appdir}/linux32/steamclient.so /home/${user}/.steam/sdk32/steamclient.so
+        tar -xvzf steamcmd_linux.tar.gz && \
+        ./steamcmd.sh +quit
 
 ENTRYPOINT ["./steamcmd.sh"]
