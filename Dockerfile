@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-MAINTAINER Christian Harke <ch.harke@gmail.com>
+FROM ubuntu:18.04
+LABEL maintainer="Christian Harke <ch.harke@gmail.com>"
 
 # Install requirements
 RUN apt-get update --quiet && \
